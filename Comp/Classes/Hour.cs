@@ -22,7 +22,10 @@ namespace Comp
             AC,
             RC
         }
-        Int32 Quarter { get; set; }
-        Int32 Quantity { get; set; }
+        private Int32 quarter;
+        public Int32 Quarter { get { return quarter; } set { quarter = value; } }
+
+        private Int32 quantity;
+        public Int32 Quantity { get { return quantity; } set { quantity = value; } }
     }
 }

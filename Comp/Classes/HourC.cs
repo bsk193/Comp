@@ -22,9 +22,12 @@ namespace Comp
             AC,
             RC
         }
-        Int32 Quarter { get; set; }
-        DateTime Date { get; set; }
-        DateTime HourStart { get; set; }
-        DateTime HourEnd { get; set; }
+        private Int32 quarter;
+        public Int32 Quarter { get { return quarter; } set { quarter = value; } }
+        private DateTime date;
+        public DateTime Date { get { return date; } set { date = value; } }
+
+        DateTime HourStart;
+        DateTime HourEnd;
     }
 }

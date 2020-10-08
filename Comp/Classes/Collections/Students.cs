@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comp.Classes.Collections
+namespace Comp
 {
     public class Students : Collection<Student>
     {
