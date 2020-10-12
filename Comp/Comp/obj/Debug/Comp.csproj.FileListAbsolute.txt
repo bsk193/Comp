@@ -1,0 +1,11 @@
+c:\users\i180052\documents\visual studio 2015\Projects\Comp\Comp\bin\Debug\Comp.exe.config
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\bin\Debug\Comp.exe
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\bin\Debug\Comp.pdb
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.csprojResolveAssemblyReference.cache
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.Form1.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.Properties.Resources.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.csproj.GenerateResource.Cache
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.exe
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.pdb
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.Add.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHour.resources
