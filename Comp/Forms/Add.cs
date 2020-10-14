@@ -12,12 +12,9 @@ namespace Comp
 {
     public partial class Add : Form
     {
-        Students students = new Students();
-        public Add(Students students)
+        public Add()
         {
-            InitializeComponent();
-            this.students = students;
-            
+            InitializeComponent();        
         }
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
@@ -28,22 +25,21 @@ namespace Comp
             }
         }
 
-        private bool validateNumber(Int64 StudentNumber)
-        {
-            foreach (Student st in students)
-            {
-                if (st.StudentNumber == StudentNumber)
-                    return false;
-            }
-            return true;
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (validateNumber(Convert.ToInt64(txtNumber.Text)))
+            if (Program.students.Count > 0)
+            {
+                if (Program.students.validateNumber(Convert.ToInt32(txtNumber.Text)))
+                {
+                    Student st = new Student(Convert.ToInt64(txtNumber.Text), txtName.Text, txtClass.Text);
+                    Program.students.Adicionar(st);
+                    this.Close();
+                }
+            }
+            else
             {
                 Student st = new Student(Convert.ToInt64(txtNumber.Text), txtName.Text, txtClass.Text);
-                students.Adicionar(st);
+                Program.students.Adicionar(st);
                 this.Close();
             }
         }

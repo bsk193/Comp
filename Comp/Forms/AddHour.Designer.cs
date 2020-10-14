@@ -38,6 +38,7 @@
             this.lstData.Size = new System.Drawing.Size(259, 461);
             this.lstData.TabIndex = 0;
             this.lstData.UseCompatibleStateImageBehavior = false;
+            this.lstData.SelectedIndexChanged += new System.EventHandler(this.lstData_SelectedIndexChanged);
             // 
             // AddHour
             // 

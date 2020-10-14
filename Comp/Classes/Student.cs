@@ -12,6 +12,8 @@ namespace Comp
         public Student(Int64 studentNumber, String name, String classCode)
         {
             this.studentNumber = studentNumber; this.name = name; this.classCode = classCode;
+            HoursToCompensate = new ToCompensate();
+            CompensatedHours = new Compensated();
         }
         private Int64 studentNumber;
         public Int64 StudentNumber { get { return studentNumber; } set { studentNumber = value; } }
@@ -22,7 +24,10 @@ namespace Comp
         private String classCode;
         public String ClassCode { get {return classCode; } set {classCode = value; } }
 
-        ToOffset HoursToOffset = new ToOffset();
-        Compensated CompensatedHours = new Compensated();
+        private ToCompensate hoursToCompensate;
+        public ToCompensate HoursToCompensate { get { return hoursToCompensate; } set { hoursToCompensate = value; } }
+
+        private Compensated compensatedHours;
+        public Compensated CompensatedHours { get { return compensatedHours; } set { compensatedHours = value; } }
     }
 }

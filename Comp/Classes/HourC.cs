@@ -8,26 +8,17 @@ namespace Comp
 {
     public class HourC
     {
-        enum Initials
-        {
-            PT,
-            ING,
-            TIC,
-            EF,
-            AI,
-            FQ,
-            MAT,
-            PSI,
-            SO,
-            AC,
-            RC
-        }
         private Int32 quarter;
         public Int32 Quarter { get { return quarter; } set { quarter = value; } }
         private DateTime date;
         public DateTime Date { get { return date; } set { date = value; } }
 
-        DateTime HourStart;
-        DateTime HourEnd;
+        private DateTime hourStart;
+        public DateTime HourStart { get { return hourStart; } set { hourStart = value; } }
+
+        private DateTime hourEnd;
+        public DateTime HourEnd { get { return hourEnd; } set { hourEnd = value; } }
+
+        private enumInitials Initials { get; set; }
     }
 }

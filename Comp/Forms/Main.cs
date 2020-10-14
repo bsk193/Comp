@@ -13,8 +13,7 @@ namespace Comp
     public partial class Form1 : Form
     {
         private Form addForm;
-        private Form addOffset;
-        Students students;
+        private Form addToCompensate;
 
         public Form1()
         {
@@ -23,19 +22,18 @@ namespace Comp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            students = new Students();
         }
 
         private void createToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            addForm = new Add(students);
+            addForm = new Add();
             addForm.Show();
         }
 
         private void registHourToOffsetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            addOffset = new AddHour(students);
-            addOffset.Show();
+            addToCompensate = new AddHour();
+            addToCompensate.Show();
         }
     }
 }

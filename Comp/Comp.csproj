@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\enumInitials.cs" />
+    <Compile Include="Forms\AddHourDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddHourDetails.Designer.cs">
+      <DependentUpon>AddHourDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,10 +75,13 @@
     </Compile>
     <Compile Include="Classes\Hour.cs" />
     <Compile Include="Classes\HourC.cs" />
-    <Compile Include="Classes\Collections\ToOffset.cs" />
+    <Compile Include="Classes\Collections\ToCompensate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Student.cs" />
+    <EmbeddedResource Include="Forms\AddHourDetails.resx">
+      <DependentUpon>AddHourDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
