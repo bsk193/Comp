@@ -24,7 +24,9 @@ namespace Comp
         {
             if(Program.students.validateData(comboSubject.SelectedItem.ToString(), Convert.ToInt32(numericQuarter.Value), Student))
             {
-
+                Student currStud = Program.students.getByNumber(Student);
+                //Hour toComp = new Hour();
+                //currStud.HoursToCompensate.Adicionar()
             }
             else
             {

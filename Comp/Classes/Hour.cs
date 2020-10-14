@@ -8,6 +8,12 @@ namespace Comp
 {
     public class Hour
     {
+        public Hour(Int32 Quarter, Int32 Quantity)
+        {
+            quarter = Quarter;
+            quantity = Quantity;
+
+        }
         private Int32 quarter;
         public Int32 Quarter { get { return quarter; } set { quarter = value; } }
 

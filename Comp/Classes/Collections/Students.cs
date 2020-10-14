@@ -60,5 +60,57 @@ namespace Comp
             }
             return false;
         }
+
+        public Student getByNumber(Int64 Number)
+        {
+            foreach(Student s in this)
+            {
+                if (s.StudentNumber == Number)
+                    return s;
+            }
+            return null;
+        }
+
+        public String[] getClasses()
+        {
+            String[] classes = {};
+            Int32 idx = 0;
+            foreach(Student s in Program.students)
+            {
+                if (classes.Contains(s.ClassCode))
+                {
+                    continue;
+                }
+                else
+                {
+                    classes[idx] = s.ClassCode;
+                    idx++;
+                }
+            }
+            return classes;
+        }
+
+        public Student[] getStudsbyClass(String Class)
+        {
+            Student[] studs = { };
+            Int32 idx = 0;
+            foreach (Student s in Program.students)
+            {
+                if (studs.Contains(s))
+                {
+                    continue;
+                }
+                else
+                {
+                    if (s.ClassCode == Class)
+                    {
+                        studs[idx] = s;
+                        idx++;
+                    }
+                }
+            }
+            return studs;
+        }
+
     }
 }

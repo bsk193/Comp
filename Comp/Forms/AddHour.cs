@@ -15,7 +15,6 @@ namespace Comp
         private Form addHourDetails;
         private Int32 lstType = 0;
         private List<Student> studentsAdd;
-        private Int32 currentStudent;
 
         public AddHour()
         {
@@ -24,15 +23,13 @@ namespace Comp
 
         private void AddHour_Load(object sender, EventArgs e)
         {
-            lstClasses();
+            Student[] studs = Program.students.getClasses();
         }
 
         private void lstData_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstType == 0)
-                lstClasses();
-            if (lstType == 1)
-                lstStudents(lstData.SelectedItems.ToString());
+                Program.students.getStudsbyClass(lstData.SelectedItems.ToString());
             if (lstType == 2)
             {
                 addHourDetails = new AddHourDetails(Convert.ToInt32(lstData.SelectedItems.ToString()));
@@ -43,6 +40,8 @@ namespace Comp
         private void lstClasses()
         {
             lstData.Clear();
+            lstData.View = View.List;
+            bool fim1;
 
             if (Program.students.Count > 0)
             {
@@ -50,14 +49,19 @@ namespace Comp
                 {
                     if (lstData.Items.Count > 0)
                     {
-                        lstData.View = View.Details;
+                        fim1 = false;
                         foreach (ListViewItem lv in lstData.Items)
                         {
                             if (st.ClassCode == lv.Text)
+                            {
+                                fim1 = true;
                                 break;
+                            }
                             else
                                 lstData.Items.Add(st.ClassCode);
                         }
+                        if (fim1 == true)
+                            break;
                     }
                     else
                         lstData.Items.Add(st.ClassCode);

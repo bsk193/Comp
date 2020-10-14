@@ -9,3 +9,4 @@ C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.pdb
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.Add.resources
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHour.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHourDetails.resources
