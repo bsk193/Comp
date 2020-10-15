@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Comp
 {
-    public partial class AddHourDetails : Form
+    public partial class AddHourCDetails : Form
     {
         private Int32 Student;
-        public AddHourDetails(Int32 Student)
+        public AddHourCDetails(Int32 Student)
         {
             InitializeComponent();
             this.Student = Student;
@@ -22,7 +22,7 @@ namespace Comp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(Program.students.validateData(comboSubject.SelectedItem.ToString(), Convert.ToInt32(numericQuarter.Value), Student))
+            if (Program.students.validateData(comboSubject.SelectedItem.ToString(), Convert.ToInt32(numericQuarter.Value), Student, datePicker.Value.Date, Convert.ToInt32(numericHStart), Convert.ToInt32(numericMStart), Convert.ToInt32(numericHEnding), Convert.ToInt32(numericMEnding)))
             {
                 Student currStud = Program.students.getByNumber(Student);
                 Hour toComp = new Hour(Convert.ToInt32(numericQuarter.Value), Convert.ToInt32((Convert.ToInt32(numericH.Value) * 60) + (Convert.ToInt32(numericM.Value))));
@@ -39,6 +39,11 @@ namespace Comp
                     this.Close();
                 }
             }
+        }
+
+        private void AddHourCDetails_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

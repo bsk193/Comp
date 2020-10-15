@@ -34,11 +34,11 @@
             this.lbHoras = new System.Windows.Forms.Label();
             this.comboSubject = new System.Windows.Forms.ComboBox();
             this.numericQuarter = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericH = new System.Windows.Forms.NumericUpDown();
+            this.numericM = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuarter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericM)).BeginInit();
             this.SuspendLayout();
             // 
             // lbSubject
@@ -117,27 +117,27 @@
             0,
             0});
             // 
-            // numericUpDown1
+            // numericH
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(228, 9);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown1.TabIndex = 9;
+            this.numericH.Location = new System.Drawing.Point(228, 9);
+            this.numericH.Name = "numericH";
+            this.numericH.Size = new System.Drawing.Size(39, 20);
+            this.numericH.TabIndex = 9;
             // 
-            // numericUpDown2
+            // numericM
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(273, 9);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown2.TabIndex = 10;
+            this.numericM.Location = new System.Drawing.Point(273, 9);
+            this.numericM.Name = "numericM";
+            this.numericM.Size = new System.Drawing.Size(39, 20);
+            this.numericM.TabIndex = 10;
             // 
             // AddHourDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 92);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericM);
+            this.Controls.Add(this.numericH);
             this.Controls.Add(this.numericQuarter);
             this.Controls.Add(this.comboSubject);
             this.Controls.Add(this.lbHoras);
@@ -147,8 +147,8 @@
             this.Name = "AddHourDetails";
             this.Text = "Add";
             ((System.ComponentModel.ISupportInitialize)(this.numericQuarter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericM)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Label lbHoras;
         private System.Windows.Forms.ComboBox comboSubject;
         private System.Windows.Forms.NumericUpDown numericQuarter;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericH;
+        private System.Windows.Forms.NumericUpDown numericM;
     }
 }

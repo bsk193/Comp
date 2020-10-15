@@ -14,6 +14,8 @@ namespace Comp
     {
         private Form addForm;
         private Form addToCompensate;
+        private Form addCompensated;
+
 
         public Form1()
         {
@@ -34,6 +36,12 @@ namespace Comp
         {
             addToCompensate = new AddHour();
             addToCompensate.Show();
+        }
+
+        private void registToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addCompensated = new AddHourC();
+            addCompensated.Show();
         }
     }
 }

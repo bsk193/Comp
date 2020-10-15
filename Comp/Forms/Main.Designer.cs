@@ -153,8 +153,8 @@
             // registHourToOffsetToolStripMenuItem
             // 
             this.registHourToOffsetToolStripMenuItem.Name = "registHourToOffsetToolStripMenuItem";
-            this.registHourToOffsetToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.registHourToOffsetToolStripMenuItem.Text = "Register hours to offset";
+            this.registHourToOffsetToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.registHourToOffsetToolStripMenuItem.Text = "Register hours to compensate";
             this.registHourToOffsetToolStripMenuItem.Click += new System.EventHandler(this.registHourToOffsetToolStripMenuItem_Click);
             // 
             // registToolStripMenuItem
@@ -162,6 +162,7 @@
             this.registToolStripMenuItem.Name = "registToolStripMenuItem";
             this.registToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.registToolStripMenuItem.Text = "Regiser compensated hours";
+            this.registToolStripMenuItem.Click += new System.EventHandler(this.registToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 

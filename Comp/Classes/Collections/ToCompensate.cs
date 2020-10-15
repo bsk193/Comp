@@ -25,6 +25,7 @@ namespace Comp
         public bool Contem(Hour toCompensate)
         {
             return base.Contains(toCompensate);
-        }
+        
     }
+}
 }

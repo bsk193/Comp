@@ -10,3 +10,5 @@ C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.Add.resources
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHour.resources
 C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHourDetails.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHourC.resources
+C:\Users\i180052\documents\visual studio 2015\Projects\Comp\Comp\obj\Debug\Comp.AddHourCDetails.resources

@@ -61,6 +61,36 @@ namespace Comp
             return false;
         }
 
+        public bool validateData(String Subject, Int32 Quarter, Int32 Student, DateTime Date, Int32 SHour, Int32 SMinute, Int32 EHour, Int32 EMinute)
+        {
+            foreach (Student s in Program.students)
+            {
+                if (s.StudentNumber == Student)
+                {
+                    foreach (Hour h in s.HoursToCompensate)
+                    {
+                        if (h.Initials.ToString() == Subject && h.Quarter == Quarter)
+                        {
+                            if (Date > DateTime.Now && ((EHour * 60 + EMinute) - (SHour * 60 + SMinute)) > 30)
+                            {
+                                return true;
+                            }
+                            else
+                                return false;
+
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                    return false;
+            }
+            return false;
+        }
+
         public Student getByNumber(Int64 Number)
         {
             foreach(Student s in this)
@@ -73,7 +103,7 @@ namespace Comp
 
         public String[] getClasses()
         {
-            String[] classes = {};
+            String[] classes = new String[Program.students.Count];
             Int32 idx = 0;
             foreach(Student s in Program.students)
             {

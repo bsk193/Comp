@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace Comp
 {
-    public partial class AddHour : Form
+    public partial class AddHourC : Form
     {
-        private Form addHourDetails;
+        private Form addHourCDetails;
         private Int32 lstType = 0;
+        private List<Student> studentsAdd;
 
-        public AddHour()
+        public AddHourC()
         {
             InitializeComponent();
         }
@@ -44,8 +45,8 @@ namespace Comp
             }
             if (lstType == 2)
             {
-                addHourDetails = new AddHourDetails(Convert.ToInt32(lstData.SelectedItems.ToString()));
-                addHourDetails.Show();
+                addHourCDetails = new AddHourDetails(Convert.ToInt32(lstData.SelectedItems.ToString()));
+                addHourCDetails.Show();
             }
         }
     }
