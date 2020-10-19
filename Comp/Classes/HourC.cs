@@ -8,6 +8,15 @@ namespace Comp
 {
     public class HourC
     {
+        public HourC(Int32 Quarter, DateTime Date, Int32 HourStart, Int32 MinuteStart, Int32 HourEnd, Int32 MinuteEnd)
+        {
+            quarter = Quarter;
+            date = Date.Date;
+            hourStart = HourStart;
+            minuteStart = MinuteStart;
+            hourEnd = HourEnd;
+            minuteEnd = MinuteEnd;
+        }
         private Int32 quarter;
         public Int32 Quarter { get { return quarter; } set { quarter = value; } }
         private DateTime date;
@@ -25,6 +34,6 @@ namespace Comp
         private Int32 minuteEnd;
         public Int32 MinuteEnd { get { return minuteEnd; } set { minuteEnd = value; } }
 
-        public enumInitials Initials { get; set; }
+        public Initials Initials { get; set; }
     }
 }

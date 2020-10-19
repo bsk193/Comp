@@ -20,7 +20,7 @@ namespace Comp
         private Int32 quantity;
         public Int32 Quantity { get { return quantity; } set { quantity = value; } }
 
-        public enumInitials Initials { get; set; }
+        public Initials Initials { get; set; }
         //public enumInitials Initials { get { return initials.ToString; } set { initials = value; } }
     }
 }

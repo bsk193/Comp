@@ -29,19 +29,41 @@ namespace Comp
         private void createToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addForm = new Add();
-            addForm.Show();
+            addForm.ShowDialog();
         }
 
         private void registHourToOffsetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addToCompensate = new AddHour();
-            addToCompensate.Show();
+            addToCompensate.ShowDialog();
+            updateLv();
         }
 
         private void registToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addCompensated = new AddHourC();
-            addCompensated.Show();
+            addCompensated.ShowDialog();
+            updateLv();
+        }
+
+        public void updateLv()
+        {
+            foreach(Student s in Program.students)
+            {
+                foreach(Hour h in s.HoursToCompensate)
+                {
+                    lvLine line = new lvLine(s, h);
+                    line.generateLine(h);
+                    lvData.Items
+                    lvData.Items.Add(line.ToString());
+                }
+                foreach(HourC hc in s.CompensatedHours)
+                {
+                    lvLine line = new lvLine(s, hc);
+                    line.generateLine(hc);
+                    lvData.Items.Add(line.ToString());
+                }
+            }
         }
     }
 }

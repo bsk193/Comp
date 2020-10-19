@@ -54,6 +54,7 @@ namespace Comp
                             return true;
                         }
                     }
+                    return true;
                 }
                 else
                     return true;
@@ -122,22 +123,22 @@ namespace Comp
 
         public Student[] getStudsbyClass(String Class)
         {
-            Student[] studs = { };
             Int32 idx = 0;
+            Student[] studs = new Student[Program.students.Count];
             foreach (Student s in Program.students)
             {
-                if (studs.Contains(s))
+                if (s.ClassCode == Class)
                 {
-                    continue;
-                }
-                else
-                {
-                    if (s.ClassCode == Class)
+                    if (studs.Contains(s))
+                        continue;
+                    else
                     {
                         studs[idx] = s;
                         idx++;
                     }
                 }
+                else
+                    continue;
             }
             return studs;
         }

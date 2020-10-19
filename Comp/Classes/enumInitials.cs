@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace Comp
 {
-    public class enumInitials
+    public enum Initials
     {
-        public enum Initials 
-        {
-            PT,
-            ING,
-            TIC,
-            EF,
-            AI,
-            FQ,
-            MAT,
-            PSI,
-            SO,
-            AC,
-            RC
-        }
+        PT,
+        ING,
+        TIC,
+        EF,
+        AI,
+        FQ,
+        MAT,
+        PSI,
+        SO,
+        AC,
+        RC
     }
 }

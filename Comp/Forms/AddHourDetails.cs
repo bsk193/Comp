@@ -13,11 +13,11 @@ namespace Comp
     public partial class AddHourDetails : Form
     {
         private Int32 Student;
-        public AddHourDetails(Int32 Student)
+        public AddHourDetails(Student Student)
         {
             InitializeComponent();
-            this.Student = Student;
-            comboSubject.DataSource = Enum.GetValues(typeof(enumInitials));
+            this.Student = Convert.ToInt32(Student.StudentNumber);
+            comboSubject.DataSource = Enum.GetValues(typeof(Initials));
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -27,6 +27,7 @@ namespace Comp
                 Student currStud = Program.students.getByNumber(Student);
                 Hour toComp = new Hour(Convert.ToInt32(numericQuarter.Value), Convert.ToInt32((Convert.ToInt32(numericH.Value) * 60) + (Convert.ToInt32(numericM.Value))));
                 currStud.HoursToCompensate.Adicionar(toComp);
+                this.Close();
             }
             else
             {

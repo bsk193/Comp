@@ -14,6 +14,8 @@ namespace Comp
     {
         private Form addHourDetails;
         private Int32 lstType = 0;
+        private Student[] studs = new Student[Program.students.Count];
+        private List<Student> studsL = new List<Student>();
 
         public AddHour()
         {
@@ -34,18 +36,28 @@ namespace Comp
         {
             if (lstType == 0)
             {
-                Student[] studs = Program.students.getStudsbyClass(lstData.SelectedItems.ToString());
+                studs = Program.students.getStudsbyClass(lstData.SelectedItems[0].Text);
                 lstData.Clear();
                 foreach (Student s in studs)
                 {
-                    lstData.Items.Add(s.Name);
+                    if (s == null)
+                        break;
+                    else
+                    {
+                        lstData.Items.Add(s.Name);
+                        studsL.Add(s);
+                    }
+
                 }
+                lstType = 2;
+                return;
 
             }
             if (lstType == 2)
             {
-                addHourDetails = new AddHourDetails(Convert.ToInt32(lstData.SelectedItems.ToString()));
-                addHourDetails.Show();
+                addHourDetails = new AddHourDetails(studsL[lstData.SelectedIndices[0]]);
+                addHourDetails.ShowDialog();
+                this.Close();
             }
         }
     }
