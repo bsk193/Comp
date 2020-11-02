@@ -29,6 +29,9 @@ namespace Comp
         public ListViewItem generateLine(HourC hc )
         {
             var item = new ListViewItem(new[] { Student.Name, compensatedHour.Quarter.ToString(), compensatedHour.Initials.ToString(), (compensatedHour.HourStart.ToString() + ":" + compensatedHour.MinuteStart.ToString()), (compensatedHour.HourEnd.ToString() + ":" + compensatedHour.MinuteEnd.ToString()), (((compensatedHour.HourEnd * 60) + compensatedHour.MinuteEnd) - ((compensatedHour.HourStart * 60) + compensatedHour.MinuteEnd)).ToString() });
+            Program.lvStud[Program.lvIndex] = Student.StudentNumber.ToString();
+            Program.lvSubj[Program.lvIndex] = compensatedHour.Initials.ToString();
+            Program.lvIndex++;
             return item;
         }
 
@@ -36,7 +39,9 @@ namespace Comp
         public ListViewItem generateLine(Hour h)
         {
             var item = new ListViewItem(new[] { Student.Name, toCompensateHour.Quarter.ToString(), toCompensateHour.Initials.ToString(), "", "", "", (toCompensateHour.Quantity / 60).ToString() });
-
+            Program.lvStud[Program.lvIndex] = Student.StudentNumber.ToString();
+            Program.lvSubj[Program.lvIndex] = toCompensateHour.Initials.ToString();
+            Program.lvIndex++;
             return item;
         }
     }

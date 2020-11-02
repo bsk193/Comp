@@ -43,9 +43,8 @@
             this.hoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registHourToOffsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.totalHoursToOffsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.totalCompensatedHoursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.totalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +111,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentsToolStripMenuItem,
             this.hoursToolStripMenuItem,
-            this.ferramentasToolStripMenuItem});
+            this.toolsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(562, 24);
@@ -138,8 +137,9 @@
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // hoursToolStripMenuItem
             // 
@@ -160,30 +160,24 @@
             // registToolStripMenuItem
             // 
             this.registToolStripMenuItem.Name = "registToolStripMenuItem";
-            this.registToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.registToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.registToolStripMenuItem.Text = "Regiser compensated hours";
             this.registToolStripMenuItem.Click += new System.EventHandler(this.registToolStripMenuItem_Click);
             // 
-            // ferramentasToolStripMenuItem
+            // toolsToolStripMenuItem
             // 
-            this.ferramentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.totalHoursToOffsetToolStripMenuItem,
-            this.totalCompensatedHoursToolStripMenuItem});
-            this.ferramentasToolStripMenuItem.Name = "ferramentasToolStripMenuItem";
-            this.ferramentasToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.ferramentasToolStripMenuItem.Text = "Ferramentas";
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.totalsToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
             // 
-            // totalHoursToOffsetToolStripMenuItem
+            // totalsToolStripMenuItem
             // 
-            this.totalHoursToOffsetToolStripMenuItem.Name = "totalHoursToOffsetToolStripMenuItem";
-            this.totalHoursToOffsetToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.totalHoursToOffsetToolStripMenuItem.Text = "Total Hours to Offset";
-            // 
-            // totalCompensatedHoursToolStripMenuItem
-            // 
-            this.totalCompensatedHoursToolStripMenuItem.Name = "totalCompensatedHoursToolStripMenuItem";
-            this.totalCompensatedHoursToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.totalCompensatedHoursToolStripMenuItem.Text = "Total Compensated Hours";
+            this.totalsToolStripMenuItem.Name = "totalsToolStripMenuItem";
+            this.totalsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.totalsToolStripMenuItem.Text = "Totals";
+            this.totalsToolStripMenuItem.Click += new System.EventHandler(this.totalsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -213,9 +207,6 @@
         private System.Windows.Forms.ToolStripMenuItem hoursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registHourToOffsetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ferramentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem totalHoursToOffsetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem totalCompensatedHoursToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader quarter;
         private System.Windows.Forms.ColumnHeader subject;
@@ -223,6 +214,8 @@
         private System.Windows.Forms.ColumnHeader startHour;
         private System.Windows.Forms.ColumnHeader endHour;
         private System.Windows.Forms.ColumnHeader remains;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem totalsToolStripMenuItem;
     }
 }
 

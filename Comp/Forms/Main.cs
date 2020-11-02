@@ -15,6 +15,7 @@ namespace Comp
         private Form addForm;
         private Form addToCompensate;
         private Form addCompensated;
+        private Form remove;
 
 
         public Form1()
@@ -53,17 +54,36 @@ namespace Comp
                 foreach(Hour h in s.HoursToCompensate)
                 {
                     lvLine line = new lvLine(s, h);
-                    line.generateLine(h);
-                    lvData.Items
-                    lvData.Items.Add(line.ToString());
+                    lvData.Items.Add(line.generateLine(h));
                 }
                 foreach(HourC hc in s.CompensatedHours)
                 {
                     lvLine line = new lvLine(s, hc);
-                    line.generateLine(hc);
-                    lvData.Items.Add(line.ToString());
+                    lvData.Items.Add(line.generateLine(hc));
                 }
             }
+        }
+
+        private void lvData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ferramentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Program.students.getTotals();
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            remove = new Remove();
+            remove.ShowDialog();
+            updateLv();
         }
     }
 }

@@ -142,6 +142,27 @@ namespace Comp
             }
             return studs;
         }
+        /*
+        public Int32[] getTotals(String Number)
+        {
+            
+            Int32[] totals = new Int32[1];
+            foreach(Student s in Program.students)
+            {
+                if(s.StudentNumber == Convert.ToInt64(Number))
+                {
+                    foreach(Hour h in s.HoursToCompensate)
+                    {
+
+                    }
+                }
+            }
+            foreach(HourC hc in st.CompensatedHours)
+            {
+                if
+            }
+        }
+        */
 
     }
 }
